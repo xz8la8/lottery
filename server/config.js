@@ -9,73 +9,59 @@
 const prizes = [
   {
     type: 0,
-    count: 1000,
-    title: "",
-    text: "特别奖"
+    count: 999,
+    text: "正在抽取新一年的幸运与美好送给蚂蚁足球队",
   },
   {
     type: 1,
-    count: 2,
+    count: 1,
     text: "特等奖",
-    title: "神秘大礼",
-    img: "../img/secrit.jpg"
+    title: "欧足联礼品套装",
+    img: "../img/anteur.jpg",
   },
   {
     type: 2,
-    count: 5,
+    count: 2,
     text: "一等奖",
-    title: "Mac Pro",
-    img: "../img/mbp.jpg"
+    title: "欧洲杯书包",
+    img: "../img/anteur.jpg",
   },
   {
     type: 3,
-    count: 6,
+    count: 4,
     text: "二等奖",
-    title: "华为 Mate30",
-    img: "../img/huawei.png"
+    title: "欧洲杯足球+围巾",
+    img: "../img/anteur.jpg",
   },
   {
     type: 4,
-    count: 7,
+    count: 10,
     text: "三等奖",
-    title: "Ipad Mini5",
-    img: "../img/ipad.jpg"
+    title: "蚂蚁足球队围巾",
+    img: "../img/anteur.jpg",
   },
   {
     type: 5,
-    count: 8,
-    text: "四等奖",
-    title: "大疆无人机",
-    img: "../img/spark.jpg"
+    count: 10,
+    text: "阳光普照奖",
+    title: "欧洲旅行套装",
+    img: "../img/anteur.jpg",
   },
-  {
-    type: 6,
-    count: 8,
-    text: "五等奖",
-    title: "Kindle",
-    img: "../img/kindle.jpg"
-  },
-  {
-    type: 7,
-    count: 11,
-    text: "六等奖",
-    title: "漫步者蓝牙耳机",
-    img: "../img/edifier.jpg"
-  }
 ];
 
 /**
  * 一次抽取的奖品个数与prizes对应
  */
-const EACH_COUNT = [1, 1, 5, 6, 7, 8, 9, 10];
-
+// const EACH_COUNT = prizes.map(({count}) => count); // 一次抽完
+const EACH_COUNT = prizes.map(({ count }) => (count % 2 ? count : count / 2)); // 一半一半抽
+EACH_COUNT[0] = 0;
 /**
  * 卡片公司名称标识
  */
-const COMPANY = "MoShang";
+const COMPANY = "AntFC";
 
 module.exports = {
   prizes,
   EACH_COUNT,
-  COMPANY
+  COMPANY,
 };
