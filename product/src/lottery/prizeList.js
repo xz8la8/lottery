@@ -246,12 +246,12 @@ let setPrizeData = (function () {
       lasetPrizeIndex = currentPrizeIndex;
     }
 
-    if (currentPrizeIndex === 0) {
-      prizeElement.prizeType.textContent = "特别奖";
-      prizeElement.prizeText.textContent = " ";
-      prizeElement.prizeLeft.textContent = "不限制";
-      return;
-    }
+    // if (currentPrizeIndex === 0) {
+    //   prizeElement.prizeType.textContent = "特别奖";
+    //   prizeElement.prizeText.textContent = " ";
+    //   prizeElement.prizeLeft.textContent = "不限制";
+    //   return;
+    // }
 
     count = totalCount - count;
     count = count < 0 ? 0 : count;

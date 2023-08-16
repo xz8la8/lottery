@@ -145,7 +145,7 @@ const EACH_COUNT = [1, 1, 5];
 该标识用于显示在抽奖卡片上。
 
 ```js
-const COMPANY = "MoShang";
+const COMPANY = "AntFC";
 ```
 ## License
 MIT
